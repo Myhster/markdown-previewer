@@ -1,14 +1,10 @@
-.App {
-  text-align: center;
-
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+#editor {
+  height: 100vh;
+}
+#preview {
+  min-height: 50vh;
+}
+.gradient-custom {
+  background: #899bec;
+  background: linear-gradient(to right, rgb(189, 194, 216), rgb(108, 145, 170));
 }

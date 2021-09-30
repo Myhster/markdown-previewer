@@ -50,18 +50,30 @@ function App() {
 
   return (
     <div className='App'>
-      <header className='App-header'>
-        <textarea
-          class='form-control'
-          id='editor'
-          rows='2'
-          onChange={(event) => setText(event.target.value)}
-        >
-          {initialText}
-        </textarea>
-
-        <p>{parseH(text)}</p>
-      </header>
+      <div className='container-fluid gradient-custom'>
+        <h2 className='text-center'>Markdown Previewer</h2>
+        <div className='row'>
+          <div className='col-6'>
+            <label for='editor' class='form-label'>
+              Enter Markdown
+            </label>
+            <textarea
+              class='input form-control'
+              id='editor'
+              rows='10'
+              onChange={(event) => setText(event.target.value)}
+            >
+              {initialText}
+            </textarea>
+          </div>
+          <div className='col-6'>
+            <label for='preview' class='form-label'>
+              Preview
+            </label>
+            <p className='preview form-control'>{parseH(text)}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
